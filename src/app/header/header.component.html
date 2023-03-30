@@ -1,0 +1,16 @@
+<header><nav class="navbar">
+  <button id="homebtn" class="button">Home</button>
+  <button id="homebtn" class="button">Showcase</button>
+              <!-- echo '<a class="navbar-brand" href="./signUp.php">U should SignUp to enjoy this website, click to SignUp</a>'; -->
+              <div id="dd-user" class="dropdown">
+              <button id="userbutton" class="button"><img id="userIcon" src="../../assets/img/nav/user2.png" /></button>
+              <div id="dropdown-user" class="dropdown-menu">
+                <a [routerLink]="'login'"><button id="dd-Login">Log In</button></a>
+                  <a [routerLink]="['/'+'register']"><button id="dd-Register">Register</button></a>
+              </div>
+              </div>
+         
+  
+</nav>
+<router-outlet></router-outlet>
+</header>

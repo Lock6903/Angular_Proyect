@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+#accountText{
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+#linkedText{
+    text-decoration: none;
+}
+a,
+button {
+    cursor: pointer;
+}
+
+@keyframes pan {
+    100% {
+        background-position: 15% 50%;
+    }
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    /* background-image: url(""); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pan 6s infinite alternate linear;
+}
+    @media(width >=500px) {
+        body {
+            padding: 0;
+        }
+    }
+
+
+.register-card {
+    width: 90%;
+    height: 100%;
+    padding: 10px 10px 44px;
+    border-radius: 24px;
+    background: #ffffff;
+    border-style: solid;
+    text-align: center;
+}
+
+
+@media (width >=500px) {
+    .register-card {
+        margin: 0;
+        width: 600px;
+    }
+}
+
+.register-card>h2{
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+ .register-card>h3{
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+
+.register-form {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+
+.register-form{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.register-form>input,
+.register-form>button {
+    height: 45px;
+    padding: 0 16px;
+    border-radius: 8px;
+    margin-right: 2%;
+}
+
+
+
+.register-form > button{
+    width: 70%;
+    height: 50px;
+    border: 0;
+    background: #b20909;
+    color: #f9f9f9;
+    font-weight: 600;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 8px;
+    margin-right: 2%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.register-form > a{
+    width: 80%;
+}
+
+.register-form > #data{
+    width: 33%;
+    
+}
+
+.register-form > #log{
+    width: 70%;
+}

@@ -1,0 +1,15 @@
+<body>
+    <br><br><br><br><br>
+    <div class="login-card">    
+        <h2>Login</h2>
+                    <h3>Enter your credentials</h3>
+        <form class="login-form" method="post" action="../controllers/Users.php">
+                <input type="hidden" name="type" value="login"><br>
+                <input type="text" name="nombre/email" placeholder="Name or Email" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <button type="submit" name="submit"><p>Log In</p></button>
+            </form>
+            <a id="linkedText" [routerLink]="['/'+'register']">If you dont have an account, SignUp</a>
+        </div>
+            <router-outlet></router-outlet>
+        </body>

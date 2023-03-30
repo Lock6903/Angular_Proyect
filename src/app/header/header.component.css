@@ -1,0 +1,148 @@
+a{
+    text-decoration: none;
+    color: inherit;
+    margin-top: 25px;
+    color: white;
+}
+button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
+    color: inherit;
+    font-family: "Euclid Circular A";
+    font-size: 20px;
+    width: 200px;
+}
+@media(width >=500px) {
+    button {
+        font-size: 20px;
+        width: 120px;
+        margin-left: 30px;
+    }
+}
+:is(.navbar, .burger, .dropdowns) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar {
+    z-index: 1;
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 72px;
+    background: #230404;
+    color: #f9f9f9;
+}
+.burger {
+    z-index: 3;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    /* background-image: url("menu.svg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* body.open .burger {
+     background-image: url("close.svg"); 
+} */
+
+.dropdowns {
+    margin-left: 10px;
+    margin-top: 28px;
+    height: 28px;
+    width: 190px;
+    z-index: 2;
+    display: flex;
+    line-height: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #2e0606;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+}
+.dropdown-menu button {
+    text-align: left;
+    width: fit-content;
+}
+
+@media (width>=500px) {
+    .dropdown {
+        height: 100%;
+        flex-direction: row;
+    }
+    #dropdown-user {
+        margin-left: 10%;
+        width: 150px;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 180px;
+        padding: 6px 24px 10px;
+        margin-bottom: 0;
+        place-items: start;
+        background: #300606;
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 24px;
+        transition: 0.3s;
+    }
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        translate: 0 0;
+    }
+}
+.dropdown-menu {
+    display: grid;
+    margin-bottom: 28px;
+}
+.dropdown-menu>button {
+    color: #f9f9f9;
+    opacity: 1;
+    height: 40px;
+}
+@media(width >=500) {
+    .dropdown-menu>button {
+        opacity: 0.6;
+    }
+    .dropdown:hover .button {
+        opacity: 1;
+    }
+}
+.dropdown-menu>button:hover {
+    opacity: 1;
+}
+#dd-user {
+    margin-left: 40%;
+    margin-top: 10px;
+}
+#dd-Login:hover,
+#dd-Register:hover,
+#dd-Int:hover,
+#dd-Ext:hover,
+#dd-Care:hover,
+#dd-Trav:hover,
+button:hover {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(173, 173, 173), 0 0 0.2em rgb(243, 243, 243);
+    color: white;
+    font: 1.2em Georgia, serif;
+}
+#dd-Login,
+#dd-Register,
+#dd-Int,
+#dd-Ext,
+#dd-Care,
+#dd-Trav {
+    margin-left: -4px;
+}
