@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CheckboxControlValueAccessor, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  user_name: FormControl = new FormControl('', Validators.required);
+  password: FormControl = new FormControl('', Validators.required)
+
+  loginGroup: FormGroup = new FormGroup({
+    user_name: this.user_name,
+    password: this.password
+  })
 }

@@ -3,18 +3,17 @@
     <div class="register-card">
     <h2>Register</h2>
             <h3>Enter your credentials</h3>
-    <form class="register-form" method="post">
-        <input type="hidden" name="type" value="register" required>
-        <input type="text" name="user_name" placeholder="Name" required><br>
-        <input type="text" name="user_lastName" placeholder="Last Name1" required><br>
-        <input type="text" name="user_lastName2" placeholder="Last Name2" required><br>
-        <input type="text" name="user_email" placeholder="Email" required><br>
-        <input type="password" name="user_password" placeholder="Password" required><br>
+    <form class="register-form" method="post" [formGroup]="registerGroup">
+        <input type="hidden" name="type"  value="register" required>
+        <input type="text" name="user_name" formControlName="user_name" placeholder="Name" required><br>
+        <input type="text" name="user_lastName" formControlName="user_lastName" placeholder="Last Name1" required><br>
+        <input type="text" name="user_lastName2" formControlName="user_lastName2" placeholder="Last Name2"><br>
+        <input type="text" name="user_email" formControlName="user_email" placeholder="Email" required><br>
+        <input type="password" name="user_password" formControlName="password" placeholder="Password" required><br>
         <input type="password" name="passwordRep" placeholder="Repeat Password" required><br>
         <button type="submit" name="submit">Sign up</button>
     </form>
    <a id="linkedText" [routerLink]="['/'+'login']">If you already have an account, LogIn</a>
 </div>
-
 <router-outlet></router-outlet>
 </body>
