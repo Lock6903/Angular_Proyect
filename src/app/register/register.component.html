@@ -3,8 +3,9 @@
     <div class="register-card">
     <h2>Register</h2>
             <h3>Enter your credentials</h3>
-    <form class="register-form" method="post" [formGroup]="registerGroup">
+    <form class="register-form" method="post" [formGroup]="registerGroup" (ngSubmit)="onSubmit(registerGroup.value)">
         <input type="hidden" name="type"  value="register" required>
+        <input type="text" name="userUid" formControlName="userUid" placeholder="UserName" required><br>
         <input type="text" name="user_name" formControlName="user_name" placeholder="Name" required><br>
         <input type="text" name="user_lastName" formControlName="user_lastName" placeholder="Last Name1" required><br>
         <input type="text" name="user_lastName2" formControlName="user_lastName2" placeholder="Last Name2"><br>

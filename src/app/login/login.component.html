@@ -3,9 +3,9 @@
     <div class="login-card">    
         <h2>Login</h2>
                     <h3>Enter your credentials</h3>
-        <form class="login-form" method="post" [formGroup]="loginGroup">
+        <form class="login-form" method="post" [formGroup]="loginGroup" (ngSubmit)="login()">
                 <input type="hidden" name="type" value="login"><br>
-                <input type="text" name="user_name" formControlName="user_name" placeholder="Name" required><br>
+                <input type="text" name="userUid" formControlName="userUid" placeholder="UserName" required><br>
                 <input type="password" name="password" formControlName="password" placeholder="Password" required><br>
                 <button type="submit" name="submit"><p>Log In</p></button>
             </form>

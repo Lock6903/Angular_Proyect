@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/collections';
-
+import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,12 +14,18 @@ export class UserService {
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.url);
   }
+ 
 
+  
+  
+  
   getUserById(id: string): Observable<User> {
     return this.http.get<User>(`${this.url}/${id}`);
   }
 
   addUser(user: User): Observable<User> {
+    console.log(user);
+    
     return this.http.post<User>(this.url, user);
   }
 
