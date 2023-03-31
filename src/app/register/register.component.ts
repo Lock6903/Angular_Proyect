@@ -21,8 +21,5 @@ export class RegisterComponent {
     password:this.password
  });
 
- loginGroup: FormGroup = new FormGroup({
-  user_name:this.user_name,
-  password:this.password
- })
+ 
 }

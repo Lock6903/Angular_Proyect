@@ -3,7 +3,7 @@
     <div class="login-card">    
         <h2>Login</h2>
                     <h3>Enter your credentials</h3>
-        <form class="login-form" method="post">
+        <form class="login-form" method="post" [formGroup]="loginGroup">
                 <input type="hidden" name="type" value="login"><br>
                 <input type="text" name="user_name" formControlName="user_name" placeholder="Name" required><br>
                 <input type="password" name="password" formControlName="password" placeholder="Password" required><br>
