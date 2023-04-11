@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/routing.service';
+import { LocalStorageService } from './services/localStorage.service';
 
 
 
@@ -34,7 +35,9 @@ import { UserService } from './services/routing.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService,
+    LocalStorageService,
+    { provide: 'LOCAL_STORAGE', useValue: window.localStorage }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

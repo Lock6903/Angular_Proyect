@@ -13,7 +13,7 @@ export class RegisterComponent {
   user_lastName: FormControl = new FormControl('', Validators.required);
   user_lastName2: FormControl = new FormControl('', Validators.required);
   user_email: FormControl = new FormControl('', Validators.required);
-  password: FormControl = new FormControl('', Validators.required)
+  user_password: FormControl = new FormControl('', Validators.required)
 
   constructor(private http: UserService) { }
   registerGroup: FormGroup = new FormGroup({
@@ -22,7 +22,7 @@ export class RegisterComponent {
     user_lastName: this.user_lastName,
     user_lastName2: this.user_lastName2,
     user_email: this.user_email,
-    password: this.password
+    user_password: this.user_password
   });
 
   ngOnInit(): void {
