@@ -11,7 +11,7 @@ import { LocalStorageService } from '../services/localStorage.service';
 })
 export class LoginComponent {
   
-  user_Uid:any = "";
+  user_Uid:string = "";
   userUid: FormControl = new FormControl('', Validators.required);
   password: FormControl = new FormControl('', Validators.required)
   userExists: boolean = false;
@@ -27,8 +27,9 @@ export class LoginComponent {
       const user = users.find(user => user.userUid === this.userUid.value);
       if (user && user.user_password === this.password.value) {
         // El usuario existe y la contraseña es correcta
-        this.localStorageService.setItem('userUid', this.userUid);
-        this.user_Uid = this.userUid;
+        this.user_Uid = this.userUid.getRawValue();
+        console.log(this.user_Uid);
+        this.localStorageService.setItem('userUid', this.user_Uid);
         this.router.navigate(['/main']);
       } else {
         // El usuario no existe o la contraseña es incorrecta
